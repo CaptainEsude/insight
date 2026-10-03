@@ -1,2 +1,15 @@
-# insight
-Show my development skills
+I’m Alexander Braun, a freelance full-stack developer, robotics enthusiast, and creator of YourMindAndPower. I enjoy building things that solve real problems, whether that means developing a website, automating an Excel workflow, or bringing software and hardware together in a robot. My experience is hands-on and driven by curiosity, experimentation, and a desire to understand how things work.
+
+My web development skills include React, Vite, Bootstrap, Python, and MySQL/SQL. I work across front-end interfaces, back-end logic, and database design, connecting what people see with the systems that make it function. Through YourMindAndPower and my other projects, I’ve gained experience turning ideas into working features, troubleshooting problems, and improving existing systems. I also work with Linux, Docker, GitHub, and VS Code, along with networking tools such as WireGuard.
+
+A major part of my development experience comes from improving workflows in trucking and dispatch operations. Working directly with those processes gives me an understanding of where repetitive tasks, inconsistent information, and unnecessary manual steps slow people down. I use that experience to build tools that fit the work people actually do.
+
+Using Excel Office Scripts and Power Automate, I’ve developed automations for scheduling tables, shipment tracking, reefer staging, daily resets, weekly archives, and importing report data. These projects involve moving records based on their status, organizing information into time slots, maintaining formatting and validation, and preparing spreadsheets for the next shift or reporting period. My goal is to make information easier to manage and reduce the amount of repetitive work needed to keep operations moving.
+
+My interest in development also extends into robotics. I’m building VIKI, a custom quadruped robot that combines mechanical assembly, electronics, networking, and software. VIKI is an ongoing project, and developing her has given me hands-on experience with the challenges of making separate systems work together.
+
+VIKI uses an NVIDIA Jetson Orin Nano as her main computer, which I call VBRAIN, and a Raspberry Pi 4 as a supporting controller, called VSPINE. Her design includes four legs with three servos per leg, along with cooling, power distribution, and planned sensing and interaction capabilities. I’ve worked on communication between the computers, servo control, automated fan management, power components, and the physical arrangement of the hardware. The project constantly pushes me to think about how software decisions affect the machine itself, from heat and power use to movement and accessibility for repairs.
+
+What connects all of my work is practical problem-solving. I like understanding a process, finding where it breaks down, and building something that makes it easier to use or maintain. I’m comfortable learning unfamiliar tools, listening to feedback, and working through problems that don’t come with a ready-made answer.
+
+As a freelancer, I’m interested in remote, project-based work involving websites, custom applications, automation, and technical problem-solving. I bring operational experience alongside development skills, and I care about creating tools that serve a clear purpose. Whether I’m improving a spreadsheet or working toward VIKI’s next milestone, I’m motivated by turning an idea into something useful.
