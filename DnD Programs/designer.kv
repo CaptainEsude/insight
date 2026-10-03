@@ -1,0 +1,96 @@
+<MyGridLayout>
+    width: 500
+    height: 1000
+    BoxLayout:
+        orientation: "vertical"
+        cols: 1
+        size: root.width, root.height
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'chest.jpg'
+
+        Label
+            text: root.time_text
+            font_name: "fonts/BadUnicornDemoRegular-BVWx.ttf"
+            font_size: "80dp"
+            color: 1,0.5,1,1
+            pos_hint: {"center_x": 0.5}
+            size_hint: None, None
+            size: 100, 200
+
+        Label:
+            text: "Chest selector"
+            pos_hint: {"center_x": 0.5}
+            size_hint: None, None
+            size: 100, 100
+            font_size: "50dp"
+        
+        GridLayout:
+            orientation: "rl-tb"
+            cols: 2
+            size_hint: 1, 0.08
+            Spinner:
+                id: chest_picker
+                background_color: 0.5, 0.5, 0.5, 0.5
+                text: 'Choose a chest'
+                values: root.get_chests()
+                on_text: root.on_chest_select(self.text)
+            
+            Spinner:
+                id: size_picker
+                background_color: 0.5, 0.5, 0.5, 0.5
+                text: 'How Big of a Chest'
+                values: root.get_chest_size()
+                on_text: root.on_chest_select_size(self.text)
+
+        ScrollView:
+            size_hint: 1, 1  # Adjust size to fit UI
+            do_scroll_x: False  # Disable horizontal scrolling
+            do_scroll_y: True
+            GridLayout:
+                orientation: "tb-rl"
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                canvas.before:
+                    Color:  # Set color before drawing the rectangle
+                        rgba: 0.5, 0.5, 0.5, 0.9  # Gray color (R, G, B, A)
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+                Label:
+                    text: root.contents_of_box
+                    font_name: "fonts/DragonHunter-9Ynxj.otf"
+                    size_hint: 1, 0.5
+                    color: 0,0,0,1
+                    text_size: self.width, None  # Enables text wrapping
+                    size_hint_y: None
+                    height: self.texture_size[1]  # Expands label height dynamically
+                    halign: 'center'
+                    valign: 'top'
+
+        GridLayout:
+            cols: 2
+            pos_hint: {"center_x": 0.5}
+            size_hint: 1, None
+            size_y: 100
+
+            Button:
+                text: "Redraw"
+                on_press: root.show_contents()
+                pos_hint: {"center_x": 0.25}
+                size_hint: 1, 0.25
+                background_color: 0.5, 0.5, 0.5, 0.5
+                color: 1,0,0,1
+
+        
+            Button:
+                text: "Copy"
+                on_press: root.copy_contents()
+                pos_hint: {"center_x": 0.75}
+                padding: 100
+                color: 0,1,0,1
+                background_color: 0.5, 0.5, 0.5, 0.5
